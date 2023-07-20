@@ -17,9 +17,9 @@ def make_chart(well_df):
 
     well_chart = alt.Chart(well_df).mark_circle()\
                     .encode(latitude='latitude:Q', longitude='longitude:Q', 
-                            color=alt.Color('gradient', scale=alt.Scale(scheme='yelloworangered')),
-                            tooltip=[alt.Tooltip('depth', title='Depth (m)'), 
-                                     alt.Tooltip('gradient', title='Gradient (°C / m)', format='0.3f')]
+                            color=alt.Color('gradient:Q', scale=alt.Scale(scheme='yelloworangered')),
+                            tooltip=[alt.Tooltip('depth:Q', title='Depth (m)'),
+                                     alt.Tooltip('gradient:Q', title='Gradient (°C / m)', format='0.3f')]
                            )\
                     .properties(title='Well locations')
 
