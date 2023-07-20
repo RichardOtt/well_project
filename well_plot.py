@@ -20,6 +20,6 @@ def make_chart(well_df):
                             tooltip=[alt.Tooltip('depth', title='Depth (m)'), 
                                      alt.Tooltip('gradient', title='Gradient (°C / m)', format='0.3f')]
                            )\
-                    .properties(title='Abandoned wells')
+                    .properties(title='Well locations')
 
     return background + well_chart
