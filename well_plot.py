@@ -8,7 +8,8 @@ def make_chart(well_df):
     # US states background
     background = alt.Chart(states).mark_geoshape(
         fill='lightgray',
-        stroke='white'
+        stroke='white',
+        tooltip=None
     ).properties(
         width=500,
         height=300
